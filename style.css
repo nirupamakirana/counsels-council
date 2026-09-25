@@ -899,3 +899,114 @@ footer {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
+/* =========================================
+   DISCLAIMER POPUP
+   ========================================= */
+
+.disclaimer-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(9, 34, 53, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  z-index: 99999;
+  overflow-y: auto;
+}
+
+.disclaimer-box {
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--cream, #f8f4ec);
+  padding: 45px 50px;
+  border: 1px solid rgba(9, 34, 53, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.disclaimer-logo {
+  text-align: center;
+  color: var(--gold, #b58a4a);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.disclaimer-box h2 {
+  text-align: center;
+  color: var(--navy, #092235);
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: 34px;
+  margin: 0 0 25px;
+}
+
+.disclaimer-box p {
+  color: var(--ink, #222);
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.disclaimer-box ol {
+  margin: 0;
+  padding-left: 25px;
+  color: var(--ink, #222);
+}
+
+.disclaimer-box li {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.disclaimer-agree {
+  display: block;
+  margin: 30px auto 0;
+  padding: 14px 45px;
+  border: none;
+  background: var(--navy, #092235);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.disclaimer-agree:hover {
+  background: var(--gold, #b58a4a);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .disclaimer-overlay {
+    padding: 15px;
+  }
+
+  .disclaimer-box {
+    padding: 30px 22px;
+    max-height: 92vh;
+  }
+
+  .disclaimer-box h2 {
+    font-size: 28px;
+  }
+
+  .disclaimer-box p,
+  .disclaimer-box li {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .disclaimer-agree {
+    width: 100%;
+  }
+}
