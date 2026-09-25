@@ -399,5 +399,75 @@
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
+
+<!-- DISCLAIMER POPUP -->
+<div id="disclaimerModal" class="disclaimer-overlay">
+  <div class="disclaimer-box">
+
+    <div class="disclaimer-logo">
+      COUNSEL'S COUNCIL
+    </div>
+
+    <h2>Disclaimer</h2>
+
+    <p>
+      The Bar Council of India does not permit the solicitation of work and
+      advertising by legal practitioners/advocates. By accessing our website,
+      the user acknowledges that:
+    </p>
+
+    <ol>
+      <li>
+        The user wishes to gain more information about us for his/her
+        information and use. He/she also acknowledges that there has been no
+        attempt by us to advertise or solicit work.
+      </li>
+
+      <li>
+        Any information obtained or downloaded by the user from our website
+        does not lead to the creation of the Advocate–Client relationship
+        between our Law Firm and the User.
+      </li>
+
+      <li>
+        None of the information contained in our website amounts to any form
+        of legal opinion or legal advice.
+      </li>
+
+      <li>
+        Our website uses cookies to improve your user experience. By using our
+        site, you agree to our use of cookies. To find out more, please see
+        our Cookies Policy &amp; Privacy Policy.
+      </li>
+    </ol>
+
+    <button id="agreeButton" class="disclaimer-agree">
+      I AGREE
+    </button>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const disclaimerModal = document.getElementById("disclaimerModal");
+    const agreeButton = document.getElementById("agreeButton");
+
+    if (localStorage.getItem("counselsCouncilDisclaimerAccepted") === "true") {
+      disclaimerModal.style.display = "none";
+    }
+
+    agreeButton.addEventListener("click", function () {
+      localStorage.setItem(
+        "counselsCouncilDisclaimerAccepted",
+        "true"
+      );
+
+      disclaimerModal.style.display = "none";
+    });
+  });
+</script>
+
 </body>
-</html>
+</html>      
+
